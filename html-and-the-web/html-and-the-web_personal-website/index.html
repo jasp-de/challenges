@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jasper Dev</title>
+    <style>
+      /* Basic Styles */
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4; /* This sets the background color of the body */
+      }
+
+      header {
+        padding: 20px;
+      }
+
+      nav a {
+        font-weight: bold;
+      }
+
+      main {
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+
+      footer {
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-bottom: 20px;
+      }
+
+      #nav-buttons-container {
+        background-color: #f4f4f4; /* Same color as body background */
+        display: flex;
+        padding: 10px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 10; /* Ensure the div stays above other elements */
+      }
+
+      #nav-buttons {
+        display: flex;
+        gap: 10px; /* Space between buttons */
+      }
+
+      /* Fancy Toggle Button */
+      #toggle-language,
+      #email-button,
+      #art-button {
+        position: fixed;
+        right: 2%;
+        border: none;
+        padding: 5px 10px;
+        font-size: 50px;
+        font-weight: bold;
+        cursor: pointer;
+        background-color: transparent; /* Make the button transparent */
+        border-radius: 25px;
+        transition: all 0.1s ease;
+      }
+
+      #toggle-language {
+        top: 5%;
+        transform: translateY(-50%);
+      }
+
+      #email-button {
+        top: 11%; /* Position below the language button */
+        transform: translateY(-50%);
+      }
+
+      #art-button {
+        top: 17%; /* Position below the language button */
+        transform: translateY(-50%);
+      }
+
+      #toggle-language:hover,
+      #email-button:hover,
+      #art-button:hover {
+        transform: translateY(-50%) scale(1.2);
+      }
+
+      @media (max-width: 900px) {
+        #toggle-language,
+        #email-button,
+        #art-button {
+          font-size: 40px;
+        }
+
+        @media (max-width: 900px) {
+          h1 {
+            margin-right: 50px;
+          }
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <div id="nav-buttons-container">
+        <div id="nav-buttons">
+          <button id="toggle-language">🇬🇧</button>
+          <button id="email-button">📧</button>
+          <button id="art-button">🎨</button>
+        </div>
+      </div>
+      <h1>Creative Web Development & E-Commerce</h1>
+      <nav>
+        <a href="#about-me">About Me</a>
+        <a href="#services">Services</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <!-- English Content -->
+
+      <div class="english">
+        <p id="about-me">
+          Hi there, my name is Jasper, I am a web developer and e-commerce
+          expert! <br />
+          Born and raised in Germany, studied in the Netherlands, now based in
+          Berlin. <br />
+          I am really excited about:
+        </p>
+
+        <ul>
+          <li>art, design & technology</li>
+          <li>AI tools and automations for SMBs</li>
+          <li>psychology and marketing</li>
+        </ul>
+
+        <section id="services">
+          <h2>What I can do for Your Business</h2>
+          🎨 design & code beautiful fast websites <br />
+          🤑 build custom shopify stores & apps <br />
+          🤖 create business automations according to your needs <br />
+          💳 write blockchain smart contracts (ETH, SOL) <br />
+          📝 develop interactive 3D web applications: product customizers and
+          more! <br />
+          <br />
+          Check out my <a href="portfolio.html">Portfolio</a> or my
+          <a href="github">GitHub</a>.
+        </section>
+
+        <section id="contact">
+          <h2>Get in Touch</h2>
+          <p>
+            Let's chat about your project! Schedule a
+            <a href="mailto:">Free Call</a> with me.<br />
+            Or send me a message on <a href="#">X</a> or
+            <a href="#">LinkedIn</a>.
+          </p>
+        </section>
+      </div>
+
+      <!-- German Content -->
+
+      <div class="german">
+        <p id="about-me">
+          Hallo, mein Name ist Jasper, ich bin Webentwickler und
+          E-Commerce-Experte! <br />
+          Geboren und aufgewachsen in Deutschland, studiert in den Niederlanden,
+          jetzt in Berlin ansässig. <br />
+          Ich bin begeistert von
+        </p>
+
+        <ul>
+          <li>Kunst, Design & Technologie</li>
+          <li>AI-Tools und Automatisierungen für KMUs</li>
+          <li>Psychologie und Marketing</li>
+        </ul>
+
+        <section id="services">
+          <h2>Was ich für Ihr Unternehmen tun kann</h2>
+          🎨 Designen & Entwickeln von schönen, schnellen Websites <br />
+          🤑 Erstellen von maßgeschneiderten Shopify-Shops & Apps <br />
+          🤖 Erstellen von Geschäftsautomatisierungen nach Ihren Bedürfnissen
+          <br />
+          💳 Schreiben von Blockchain-Smart-Contracts (ETH, SOL) <br />
+          📝 Entwickeln interaktiver 3D-Webanwendungen: Produktkonfiguratoren
+          und mehr! <br />
+          <br />
+          Schauen Sie sich mein <a href="portfolio.html">Portfolio</a> oder
+          meinen <a href="github">GitHub</a> an.
+        </section>
+
+        <section id="contact">
+          <h2>Kontaktieren Sie mich</h2>
+          <p>
+            Lassen Sie uns über Ihr Projekt sprechen! Vereinbaren Sie einen
+            <a href="mailto:">kostenlosen Anruf</a> mit mir.<br />
+            Oder senden Sie mir eine Nachricht auf <a href="#">X</a> oder
+            <a href="#">LinkedIn</a>.
+          </p>
+        </section>
+      </div>
+    </main>
+
+    <footer>
+      <p>© 2024 Jasper</p>
+      <div>
+        <a href="#about-me">Datenschutzrichtlinie</a>
+        <a href="#services">Impressum</a>
+      </div>
+    </footer>
+
+    <script>
+      const toggleBtn = document.getElementById("toggle-language");
+      const englishContent = document.querySelector(".english");
+      const germanContent = document.querySelector(".german");
+
+      toggleBtn.addEventListener("click", () => {
+        if (englishContent.style.display === "none") {
+          englishContent.style.display = "block";
+          germanContent.style.display = "none";
+          toggleBtn.textContent = "🇩🇪";
+        } else {
+          englishContent.style.display = "none";
+          germanContent.style.display = "block";
+          toggleBtn.textContent = "🇬🇧";
+        }
+      });
+    </script>
+  </body>
+</html>
