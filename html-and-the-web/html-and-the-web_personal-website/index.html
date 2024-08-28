@@ -36,6 +36,11 @@
         display: none;
       }
 
+      /* Prevent word breaking */
+      .no-wrap {
+        white-space: nowrap;
+      }
+
       #nav-buttons-container {
         background-color: #f4f4f4; /* Same color as body background */
         display: flex;
@@ -98,7 +103,7 @@
 
         @media (max-width: 900px) {
           h1 {
-            margin-right: 50px;
+            margin-right: 40px;
           }
         }
       }
@@ -114,7 +119,9 @@
           <button id="art-button">🎨</button>
         </div>
       </div>
-      <h1>Creative Web Development & E-Commerce</h1>
+      <h1>
+        Creative Web Development & <span class="no-wrap">E-commerce</span>
+      </h1>
       <nav>
         <a href="#about-me">About Me</a>
         <a href="#services">Services</a>
