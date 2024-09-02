@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jasper Dev</title>
+    <style>
+      /* Basic Styles */
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4; /* This sets the background color of the body */
+      }
+
+      header {
+        padding: 20px;
+        display: flex;
+        flex-direction: row;
+      }
+
+      .header-text {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        padding-left: 40px;
+        padding-right: 50px;
+      }
+
+      @media screen and (max-width: 500px) {
+        header {
+          flex-direction: column;
+        }
+        .header-text {
+          padding-left: 0;
+          padding-right: 0px;
+        }
+      }
+
+      h2 {
+        padding-top: 70px;
+      }
+
+      nav a {
+        font-weight: bold;
+      }
+
+      main {
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+
+      footer {
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-bottom: 20px;
+        padding-top: 70px;
+        font-size: smaller;
+      }
+
+      .german {
+        display: none;
+      }
+
+      .signup {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        padding: 20px;
+        margin-right: 10px;
+        background-color: #f4f4f4;
+        border-top: 1px solid #ccc;
+        max-width: 370px;
+      }
+
+      /* Prevent word breaking */
+      .no-wrap {
+        white-space: nowrap;
+      }
+
+      #nav-buttons-container {
+        background-color: #f4f4f4; /* Same color as body background */
+        display: flex;
+        padding: 10px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 10; /* Ensure the div stays above other elements */
+      }
+
+      #nav-buttons {
+        display: flex;
+        gap: 10px; /* Space between buttons */
+      }
+
+      /* Fancy Toggle Button */
+      #toggle-language,
+      #email-button,
+      #art-button {
+        position: fixed;
+        right: 2%;
+        border: none;
+        padding: 5px 10px;
+        font-size: 50px;
+        font-weight: bold;
+        cursor: pointer;
+        background-color: transparent; /* Make the button transparent */
+        border-radius: 25px;
+        transition: all 0.1s ease;
+      }
+
+      #toggle-language {
+        top: 5%;
+        transform: translateY(-50%);
+      }
+
+      #art-button {
+        top: 11%; /* Position below the language button */
+        transform: translateY(-50%);
+      }
+
+      #email-button {
+        top: 17%; /* Position below the language button */
+        transform: translateY(-50%);
+      }
+
+      #toggle-language:hover,
+      #email-button:hover,
+      #art-button:hover {
+        transform: translateY(-50%) scale(1.2);
+      }
+
+      @media (max-width: 900px) {
+        #toggle-language,
+        #email-button,
+        #art-button {
+          font-size: 30px;
+        }
+
+        @media (max-width: 900px) {
+          h1 {
+            margin-right: 40px;
+          }
+        }
+      }
+
+      .img-header {
+        max-width: 150px;
+        border-radius: 50%;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <div id="nav-buttons">
+        <button id="toggle-language">🇩🇪</button>
+        <button id="art-button">🎨</button>
+        <button id="email-button">📧</button>
+      </div>
+      <div class="header"></div>
+      <img class="img-header" src="photo.png" alt="Photo of Jasper" />
+      <div class="header-text">
+        <h1>
+          Creative Web Development <span class="no-wrap">& E-commerce</span>
+        </h1>
+        <nav>
+          <a href="#services">Services</a>
+          <a href="#portfolio">Portfolio</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <!-- English Content -->
+
+      <div class="english">
+        <p id="about-me">
+          Hi there, my name is Jasper, I am a Web-Developer and Shopify Expert.
+          <br />
+          I am really excited about:
+        </p>
+
+        <ul>
+          <li>art, design & technology</li>
+          <li>AI tools and automations for SMBs</li>
+          <li>psychology and marketing</li>
+        </ul>
+
+        <section id="services">
+          <h2>What I can do for Your Business</h2>
+          ⏩ beautiful fast websites <br />
+          <ul>
+            <li>responsive mobile first</li>
+            <li>contact and email integration</li>
+            <li>scheduling & payments</li>
+          </ul>
+          🤑 shopify services
+          <ul>
+            <li>custom stores/apps/components</li>
+            <li>point of sale</li>
+            <li>Shopify Plus</li>
+          </ul>
+          🤖 business automations <br />
+          <ul>
+            <li>AI customer support, internal chatbots</li>
+            <li>sata analytics, reporting, forecasting</li>
+            <li>Google Sheets, Gmail, Zapier etc</li>
+          </ul>
+          💳 blockchain
+          <ul>
+            <li>custom smart contracts</li>
+            <li>crypto payments integration</li>
+          </ul>
+          🎨 interactive 3D web apps
+          <ul>
+            <li>product customizers</li>
+            <li>virtual tours</li>
+            <li>AR/VR</li>
+          </ul>
+          Check out my <a href="portfolio.html">Portfolio</a> or my
+          <a href="github">GitHub</a>.
+        </section>
+
+        <section id="contact">
+          <h2>Get in Touch</h2>
+          <p>
+            Let's talk about your project! <br />
+            Fill out the contact form. <br />
+            Or send me a message on <a href="#">X</a> or
+            <a href="#">LinkedIn</a>.
+          </p>
+        </section>
+      </div>
+
+      <!-- German Content -->
+
+      <div class="german">
+        <p id="about-me">
+          Hallo, mein Name ist Jasper, ich bin Webentwickler und
+          Shopify-Experte.
+          <br />
+          Ich bin begeistert von:
+        </p>
+
+        <ul>
+          <li>Kunst, Design & Technologie</li>
+          <li>AI-Tools und Automatisierungen für KMUs</li>
+          <li>Psychologie und Marketing</li>
+        </ul>
+
+        <section id="services">
+          <h2>Was ich für Ihr Unternehmen tun kann</h2>
+          ⏩ schöne, schnelle Websites <br />
+          <ul>
+            <li>responsive, mobil zuerst</li>
+            <li>Kontakt- und E-Mail-Integration</li>
+            <li>Terminbuchung & Zahlungen</li>
+          </ul>
+          🤑 Shopify-Dienstleistungen
+          <ul>
+            <li>maßgeschneiderte Shops/Apps/Komponenten</li>
+            <li>Point of Sale</li>
+            <li>Shopify Plus</li>
+          </ul>
+          🤖 Geschäftsautomatisierungen <br />
+          <ul>
+            <li>KI-Kundensupport, interne Chatbots</li>
+            <li>Datenanalyse, Reporting, Prognosen</li>
+            <li>Google Sheets, Gmail, Zapier usw.</li>
+          </ul>
+          💳 Blockchain
+          <ul>
+            <li>maßgeschneiderte Smart Contracts</li>
+            <li>Krypto-Zahlungsintegration</li>
+          </ul>
+          🎨 interaktive 3D-Webanwendungen
+          <ul>
+            <li>Produktkonfiguratoren</li>
+            <li>virtuelle Rundgänge</li>
+            <li>AR/VR</li>
+          </ul>
+          Schauen Sie sich mein <a href="portfolio.html">Portfolio</a> oder
+          meinen <a href="github">GitHub</a> an.
+        </section>
+
+        <section id="contact">
+          <h2>Kontakt</h2>
+          <p>
+            Lassen Sie uns über Ihr Projekt sprechen! <br />
+            Füllen Sie das Kontaktformular aus. <br />
+            Oder schicken Sie mir eine Nachricht auf <a href="#">X</a> oder
+            <a href="#">LinkedIn</a>.
+          </p>
+        </section>
+      </div>
+      <div>
+        <form id="email-signup" class="signup" action="mailto:" method="post">
+          <input type="text" placeholder="Name" />
+          <input type="email" placeholder="E-Mail" />
+          <textarea placeholder="Details"></textarea>
+          <button type="submit">SEND</button>
+        </form>
+      </div>
+    </main>
+
+    <footer>
+      <p>© 2024 Jasper</p>
+      <div>
+        <a href="#privacy">Datenschutzrichtlinie</a>
+        <a href="#imprint">Impressum</a>
+      </div>
+    </footer>
+
+    <script>
+      const toggleBtn = document.getElementById("toggle-language");
+      const englishContent = document.querySelector(".english");
+      const germanContent = document.querySelector(".german");
+
+      toggleBtn.addEventListener("click", () => {
+        if (englishContent.style.display === "none") {
+          englishContent.style.display = "block";
+          germanContent.style.display = "none";
+          toggleBtn.textContent = "🇩🇪";
+        } else {
+          englishContent.style.display = "none";
+          germanContent.style.display = "block";
+          toggleBtn.textContent = "🇬🇧";
+        }
+      });
+    </script>
+  </body>
+</html>
+
+<script>
+  const emailBtn = document.getElementById("email-button");
+
+  emailBtn.addEventListener("click", () => {
+    document
+      .getElementById("email-signup")
+      .scrollIntoView({ behavior: "smooth" });
+  });
+
+  // Smooth scroll for navigation links
+  document.querySelectorAll("nav a").forEach((anchor) => {
+    anchor.addEventListener("click", function (e) {
+      e.preventDefault();
+      const targetId = this.getAttribute("href").substring(1);
+      document.getElementById(targetId).scrollIntoView({ behavior: "smooth" });
+    });
+  });
+</script>
