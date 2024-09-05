@@ -10,6 +10,11 @@ console.clear();
 */
 
 // --v-- write your code here --v--
+const title = "Hello World";
+const text = "This is JavaScript";
+let likes = 0;
+const author = "Jasper";
+let isReported = "FALSE";
 
 // --^-- write your code here --^--
 
@@ -19,4 +24,13 @@ console.clear();
 
 // --v-- write your code here --v--
 
+console.log(title);
+console.log(text);
+console.log(likes);
+console.log(author);
+console.log(isReported);
+likes = likes + 1;
+console.log(likes);
+likes++;
+console.log(likes);
 // --^-- write your code here --^--
