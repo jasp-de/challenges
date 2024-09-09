@@ -10,6 +10,15 @@ console.clear();
 
 // --v-- write your code here --v--
 
+let books = [
+  {
+    title: "Title1",
+    author: "Author1",
+    rating: 10,
+    sales: 10000,
+  },
+];
+
 // --^-- write your code here --^--
 
 /*
@@ -26,6 +35,8 @@ Then log all variables to the console again.
 
 // --v-- write your code here --v--
 
+console.log(books[0]);
+
 // --^-- write your code here --^--
 
 /*
@@ -37,5 +48,17 @@ Then log all variables to the console again.
 */
 
 // --v-- write your code here --v--
+
+function logBookData(index) {
+  console.log("Title:", books[index].title);
+  console.log("Author:", books[index].author);
+  console.log("Rating:", books[index].rating);
+  console.log("Sales:", books[index].sales);
+  books[index].sales += 2;
+}
+
+logBookData(0);
+console.log("increase sales by 2");
+logBookData(0);
 
 // --^-- write your code here --^--
