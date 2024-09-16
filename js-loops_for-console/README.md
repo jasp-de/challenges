@@ -1,6 +1,6 @@
 # For Loop and `console.log()`
 
-To be clear: Loops can be frightening at the beginning. But don't worry, we are going to make you familiar with the syntax and it will be fine ;)
+To be clear: Loops can be frightening at the beginning. But don't worry, we are going to make you familiar with the syntax and it will be fine ;
 
 ## Task
 
