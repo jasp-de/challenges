@@ -1,0 +1,22 @@
+{
+  "name": "npm-superheroes",
+  "version": "1.0.0",
+  "description": "superhero names",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "challenges"
+  },
+  "keywords": [
+    "npm"
+  ],
+  "author": "JD",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "supervillains": "^4.0.0"
+  }
+}
