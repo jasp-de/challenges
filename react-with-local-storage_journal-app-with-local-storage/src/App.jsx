@@ -1,9 +1,9 @@
-import { useState } from "react";
 import EntriesSection from "./components/EntriesSection";
 import EntryForm from "./components/EntryForm";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 import { uid } from "uid";
+import useLocalStorageState from "use-local-storage-state";
 import "./App.css";
 
 const initialEntries = [
@@ -37,8 +37,15 @@ const initialEntries = [
 ];
 
 function App() {
-  const [entries, setEntries] = useState(initialEntries);
-  const [filter, setFilter] = useState("all"); // "all" or "favorites"
+  const [entries, setEntries] = useLocalStorageState("entries", {
+    defaultValue: initialEntries,
+  });
+  const [filter, setFilter] = useLocalStorageState("filter", {
+    defaultValue: "all",
+  }); // "all" or "favorites"
+
+  // The useLocalStorageState hook already handles loading from and saving to localStorage,
+  // so we don't need the additional useEffect hooks for entries and filter.
 
   function handleAddEntry(newEntry) {
     const date = new Date().toLocaleDateString("en-us", {
