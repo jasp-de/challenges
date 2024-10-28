@@ -1,0 +1,138 @@
+// index.js
+
+console.clear();
+
+const pixelValues = [
+  [
+    "#FF6B6B",
+    "#FFD93D",
+    "#6BCB77",
+    "#4D96FF",
+    "#845EC2",
+    "#FF9671",
+    "#00C9A7",
+    "#FFC75F",
+    "#C34A36",
+    "#0081CF",
+  ],
+  [
+    "#FFD93D",
+    "#6BCB77",
+    "#4D96FF",
+    "#845EC2",
+    "#FF9671",
+    "#00C9A7",
+    "#FFC75F",
+    "#C34A36",
+    "#0081CF",
+    "#FF6B6B",
+  ],
+  [
+    "#6BCB77",
+    "#4D96FF",
+    "#845EC2",
+    "#FF9671",
+    "#00C9A7",
+    "#FFC75F",
+    "#C34A36",
+    "#0081CF",
+    "#FF6B6B",
+    "#FFD93D",
+  ],
+  [
+    "#4D96FF",
+    "#845EC2",
+    "#FF9671",
+    "#00C9A7",
+    "#FFC75F",
+    "#C34A36",
+    "#0081CF",
+    "#FF6B6B",
+    "#FFD93D",
+    "#6BCB77",
+  ],
+  [
+    "#845EC2",
+    "#FF9671",
+    "#00C9A7",
+    "#FFC75F",
+    "#C34A36",
+    "#0081CF",
+    "#FF6B6B",
+    "#FFD93D",
+    "#6BCB77",
+    "#4D96FF",
+  ],
+  [
+    "#FF9671",
+    "#00C9A7",
+    "#FFC75F",
+    "#C34A36",
+    "#0081CF",
+    "#FF6B6B",
+    "#FFD93D",
+    "#6BCB77",
+    "#4D96FF",
+    "#845EC2",
+  ],
+  [
+    "#00C9A7",
+    "#FFC75F",
+    "#C34A36",
+    "#0081CF",
+    "#FF6B6B",
+    "#FFD93D",
+    "#6BCB77",
+    "#4D96FF",
+    "#845EC2",
+    "#FF9671",
+  ],
+  [
+    "#FFC75F",
+    "#C34A36",
+    "#0081CF",
+    "#FF6B6B",
+    "#FFD93D",
+    "#6BCB77",
+    "#4D96FF",
+    "#845EC2",
+    "#FF9671",
+    "#00C9A7",
+  ],
+  [
+    "#C34A36",
+    "#0081CF",
+    "#FF6B6B",
+    "#FFD93D",
+    "#6BCB77",
+    "#4D96FF",
+    "#845EC2",
+    "#FF9671",
+    "#00C9A7",
+    "#FFC75F",
+  ],
+  [
+    "#0081CF",
+    "#FF6B6B",
+    "#FFD93D",
+    "#6BCB77",
+    "#4D96FF",
+    "#845EC2",
+    "#FF9671",
+    "#00C9A7",
+    "#FFC75F",
+    "#C34A36",
+  ],
+];
+
+const canvas = document.querySelector('[data-js="canvas"]');
+
+// Loop through the `pixelValues` 2D array to create pixel elements
+for (let row = 0; row < pixelValues.length; row++) {
+  for (let col = 0; col < pixelValues[row].length; col++) {
+    const pixelElement = document.createElement("div");
+    pixelElement.classList.add("pixel");
+    pixelElement.style.backgroundColor = pixelValues[row][col];
+    canvas.append(pixelElement);
+  }
+}
