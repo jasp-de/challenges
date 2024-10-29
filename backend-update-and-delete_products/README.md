@@ -61,6 +61,8 @@ Switch back to `./components/ProductForm/index.js` and
 
 > 💡 Bonus: Pass another new prop to the `ProductForm` component to set the heading of the form dynamically ("Add a new Fish" is not a proper headline when updating the product, right?).
 
+/// ''' --------
+
 #### Send a `PUT` request
 
 Switch to `components/Product/index.js.js`.
